@@ -20,7 +20,7 @@ exports.createServer = function (router) {
 };
 
 exports.handlers = {
-  respondWithId: function (id) {
+  respondWithId: function (req, res, id) {
     this.res.writeHead(200, { 'Content-Type': 'text/plain' })
     this.res.end('hello from (' + id + ')');
   },
